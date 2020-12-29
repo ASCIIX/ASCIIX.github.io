@@ -215,7 +215,7 @@ Clock.prototype.rotate = function () {
         this.hourWrapper.style.transform = 'rotate(' + currentHourDeg + 'deg)';
         this.minuteWrapper.style.transform = 'rotate(' + currentMinuteDeg + 'deg)';
         this.secondWrapper.style.transform = 'rotate(' + currentSecondDeg + 'deg)';
-        },100)
+        },1000)
     },3000)
 }
 
