@@ -202,7 +202,7 @@ Clock.prototype.rotate = function () {
                 if (this.currentHour == 0) {
                     currentDayDeg += dayDeg;
                     currentWeekDeg += weekDeg;
-                    if (this.currentDay == 1) {
+                    if (this.currentDay == 0) {
                         currentMonthDeg += monthDeg;
                         this.changeMonthDay()
                     }
