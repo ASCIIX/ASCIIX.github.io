@@ -2,14 +2,21 @@
     padding: 0;
     margin: 0;
 }
-h1 {
+h2 {
     text-align: center;
-    text-color:#ffccff;
+    color: deepskyblue;
 }
 h3 {
     text-align: center;
+    color: #ffcccc;
 }
-
+h4 {
+    text-align: center;
+    color: #ffcccc;
+}
+h5 {
+    float: left;
+}
 
 .wrapper {
     width: 850px;
