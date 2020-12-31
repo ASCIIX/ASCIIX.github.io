@@ -1,4 +1,7 @@
-
+/*
+anther:Sakurax
+去他喵的注释，老子才不写注释。
+*/
 function Clock(wrap){
     this.wrap = wrap;
     var date = new Date();
@@ -38,13 +41,6 @@ Clock.prototype.getMonthDay = function (){
     }
     return result[this.currentMonth - 1];
 }
-
-Clock.prototype.rotate = function () {
-
-}
-
-
-
 
 Clock.prototype.createDom = function (){
     var fragment = document.createDocumentFragment();
