@@ -2,24 +2,12 @@
     padding: 0;
     margin: 0;
 }
-h2 {
-    text-align: center;
-    color: deepskyblue;
-}
-h3 {
-    text-align: center;
-    color: #ffcccc;
-}
-h4 {
-    text-align: center;
-    color: #ffcccc;
-}
 
 .wrapper {
-    width: 850px;
-    height: 850px;
+    width: 800px;
+    height: 800px;
     margin: 50px auto;
-    border: 1px solid deepskyblue;
+    border: 1px solid #000;
     position: relative;
 }
 
@@ -29,7 +17,7 @@ h4 {
     left: 50%;
     top: calc(50% + 20px);
     width: 50%;
-    background-color: dodgerblue;
+    background-color: #000;
     height: 2px;
 }
 
@@ -44,37 +32,30 @@ h4 {
 
 .year {
     width: 60px;
-    color: darkturquoise;
 }
 
 .month {
     width: 100px;
-    color: aqua;
 }
 
 .day {
     width: 150px;
-    color: turquoise;
 }
 
 .week {
     width: 230px;
-    color: deepskyblue;
 }
 
 .hour {
     width: 300px;
-    color: cyan;
 }
 
 .minute {
     width: 350px;
-    color: dodgerblue;
 }
 
 .second {
     width: 400px;
-    color: deepskyblue;
 }
 
 .wrapper span {
