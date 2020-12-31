@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+.h1 {
+    text-align: center;
+    color:#ffccff;
+}
 
 .wrapper {
     width: 850px;
