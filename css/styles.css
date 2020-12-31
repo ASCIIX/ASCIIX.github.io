@@ -1,14 +1,13 @@
-
 * {
     padding: 0;
     margin: 0;
 }
 
 .wrapper {
-    width: 800px;
-    height: 800px;
+    width: 850px;
+    height: 850px;
     margin: 50px auto;
-    border: 1px solid #000;
+    border: 1px solid deepskyblue;
     position: relative;
 }
 
@@ -33,31 +32,37 @@
 
 .year {
     width: 60px;
-    color:#b3ffff;
+    color: darkturquoise;
 }
 
 .month {
     width: 100px;
+    color: aqua;
 }
 
 .day {
     width: 150px;
+    color: turquoise;
 }
 
 .week {
     width: 230px;
+    color: deepskyblue;
 }
 
 .hour {
     width: 300px;
+    color: cyan;
 }
 
 .minute {
     width: 350px;
+    color: dodgerblue;
 }
 
 .second {
     width: 400px;
+    color: deepskyblue;
 }
 
 .wrapper span {
