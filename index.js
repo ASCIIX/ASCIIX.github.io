@@ -1,5 +1,5 @@
 /*
-anther:Sakurax
+author:Sakurax
 去他喵的注释，老子才不写注释。
 */
 function Clock(wrap){
