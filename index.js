@@ -199,5 +199,6 @@ Clock.prototype.rotate = function () {
         },1000)
     },3000)
 }
+
 var c = new Clock(document.getElementsByClassName('wrapper')[0])
 c.init()
