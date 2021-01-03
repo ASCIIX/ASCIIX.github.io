@@ -170,10 +170,10 @@ Clock.prototype.rotate = function () {
 
         var currentMonthDeg = (this.currentMonth -1) * monthDeg;
         var currentDayDeg = (this.currentDay -1) * dayDeg;
-        var currentWeekDeg = (this.currentWeek) * weekDeg;
-        var currentHourDeg = (this.currentHour) * hourDeg;
-        var currentMinuteDeg = (this.currentMinute) * minuteDeg;
-        var currentSecondDeg = (this.currentSecond) * secondDeg;
+        var currentWeekDeg = this.currentWeek * weekDeg;
+        var currentHourDeg = this.currentHour * hourDeg;
+        var currentMinuteDeg = this.currentMinute * minuteDeg;
+        var currentSecondDeg = this.currentSecond * secondDeg;
 
         this.monthWrapper.style.transform = 'rotate(' + currentMonthDeg + 'deg)';
         this.dayWrapper.style.transform = 'rotate(' + currentDayDeg + 'deg)';
