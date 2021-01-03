@@ -190,21 +190,6 @@ Clock.prototype.rotate = function () {
         this.currentHour = date.getHours();
         this.currentMinute = date.getMinutes();
         this.currentSecond = date.getSeconds();
-        currentSecondDeg += secondDeg;
-        if (this.currentSecond == 0) {
-            currentMinuteDeg += minuteDeg;
-            if (this.currentMinute == 0) {
-                currentHourDeg += hourDeg;
-                if (this.currentHour == 0) {
-                    currentDayDeg += dayDeg;
-                    currentWeekDeg += weekDeg;
-                    if (this.currentDay == 1) {
-                        currentMonthDeg += monthDeg;
-                        this.changeMonthDay()
-                    }
-                }
-            }
-        }
         this.monthWrapper.style.transform = 'rotate(' + currentMonthDeg + 'deg)';
         this.dayWrapper.style.transform = 'rotate(' + currentDayDeg + 'deg)';
         this.weekWrapper.style.transform = 'rotate(' + currentWeekDeg + 'deg)';
