@@ -214,19 +214,5 @@ Clock.prototype.rotate = function () {
         },1000)
     },3000)
 }
-
-Clock.prototype.changeMonthDay = function () {
-    this.dayWrapper.innerHTML = '';
-    this.daysSpan = [];
-    var fragment = document.createDocumentFragment();
-    for (var i = 1; i <= this.getMonthDay(); i++){
-        var oSpan = document.createElement('span');
-        oSpan.innerText = i + '日';
-        fragment.dayWrapper.appendChild(oSpan);
-        oSpan.style.transform = 'rotate(-' + (i - 1) * dayDeg + 'deg)';
-        this.daysSpan.push(oSpan);
-    }
-    this.dayWrapper.appendChild(fragment);
-}
 var c = new Clock(document.getElementsByClassName('wrapper')[0])
 c.init()
