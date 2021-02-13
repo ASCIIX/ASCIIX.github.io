@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(#99f,#f99);     /*背景渐变*/
+}
+
+h3 {
+    color: cyan;
+}
+h4 {
+    color: #ff1ace;
+}
+
+h5 {
+    color: darkorchid;
+}
+
+#footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 25px;
+}
