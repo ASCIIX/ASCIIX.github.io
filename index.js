@@ -1,5 +1,5 @@
 /*
-author:Sakurax
+author:SakuraX
 去他喵的注释，老子才不写注释。
 */
 function Clock(wrap){
@@ -211,7 +211,7 @@ Clock.prototype.rotate = function () {
         this.hourWrapper.style.transform = 'rotate(' + currentHourDeg + 'deg)';
         this.minuteWrapper.style.transform = 'rotate(' + currentMinuteDeg + 'deg)';
         this.secondWrapper.style.transform = 'rotate(' + currentSecondDeg + 'deg)';
-        },1000)
+        },1000) //这里是秒数 1s == 1000ms ，理论准确，跑久了就会出现偏差，需要改为 995-1000之间
     },3000)
 }
 
