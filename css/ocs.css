@@ -9,7 +9,7 @@ body {
     overflow-x:hidden;
     overflow-y:hidden;
 }
-#span {
+span {
     color: #ffcccc;
     left: 100px;
     z-index: -1;
