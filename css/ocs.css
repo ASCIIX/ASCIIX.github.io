@@ -9,11 +9,6 @@ body {
     overflow-x:hidden;
     overflow-y:hidden;
 }
-span {
-    color: #ffcccc;
-    left: 100px;
-    z-index: -1;
-}
 .header {
     z-index: -1;
 }
