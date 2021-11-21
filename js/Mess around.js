@@ -13,7 +13,7 @@ function GetServerTime()
 		d = Math.floor(leftTime/1000/60/60/24);
  		h = Math.floor(leftTime/1000/60/60%24);
  		m = Math.floor(leftTime/1000/60%60);
-    		s = Math.round(leftTime/1000%60);
+    		s = Math.floor(leftTime/1000%60);
  	document.getElementById("date").innerHTML = d + " 天 ";
  	document.getElementById("time").innerHTML = h + " 小时 " + m + " 分钟 " + s + " 秒 ";
 }
