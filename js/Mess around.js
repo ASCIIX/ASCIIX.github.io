@@ -18,3 +18,4 @@ function GetServerTime()
  	document.getElementById("time").innerHTML = h + " 小时 " + m + " 分钟 " + s + " 秒 ";
 }
 setInterval("GetServerTime()",250);
+
