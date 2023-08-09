@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>MSMGTool精简系统教程</title>
+</head>
+<body><p>MSMG_Tool精简系统教程</p>
+<pre><code>前言：
+	思来想去，每次重装电脑总是多出一堆不需要的功能，像Windows的Xbox（因为我买不起）、以及用不到的3D绘图，Cortana(小娜，不支持中文环境)、混合现实门户、你的手机(貌似不支持国内)、Skype、还有毒瘤资讯，和用不上的软件，每次还得通过DISM++去卸载，保不准还有残留，有点麻烦，不如直接在安装的时候进行精简掉。
+</code></pre>
+<h4 id='一教程开始'>一、教程开始</h4>
+<ol start='' >
+<li><p>所需要的工具</p>
+<pre><code>1.DISM++(https://sakurax.lanzouj.com/iKfbd14vf17a |https://github.com/Chuyu-Team/Dism-Multi-language/releases/tag/v10.1.1002.2 )
+2.MSMG_TOOL(https://sakurax.lanzouj.com/iPwQp14vf54b)
+3.NTLite(我没买，所以此教程不包含此项)
+4.电脑
+5.Windows镜像文件(next.itellyou.cn | msdn.itellyou.cn)
+6.手。。。。。。| 脚。。。。。。|嘴。。。。。。
+7.前排卖瓜子饮料
+</code></pre>
+</li>
+<li><p>正式开始</p>
+</li>
+
+</ol>
+<pre><code>请先准备Windows镜像，这里采用zh-cn_windows_10_consumer_editions_version_22h2_updated_july_2023_x64_dvd_0ee9325c.iso
+
+双击打开，提取Sources文件夹中的install.wim
+</code></pre>
+<p><img src="\img\Windows\image-20230809132938588.png" referrerpolicy="no-referrer" alt="image-20230809132938588"></p>
+<p>	①. 打开DISM++，找到工具箱的imagex</p>
+<pre><code>先删除一些不需要的版本，例如：家庭版、家庭中文版、教育版、专业工作站版、专业教育版、如不需要可以步过此步骤。
+</code></pre>
+<p><img src="\img\Windows\image-20230809132229921.png" referrerpolicy="no-referrer" alt="image-20230809132229921"></p>
+<p>	②. 浏览打开复制的install.wim</p>
+<p><img src="\img\Windows\image-20230809132335920.png" referrerpolicy="no-referrer" alt="image-20230809133043502"></p>
+<p><img src="\img\Windows\image-20230809132352920.png" referrerpolicy="no-referrer" alt="image-20230809132352920"></p>
+<pre><code>我这里删除了家庭版、家庭中文版、教育版、专业工作站版、专业教育版
+</code></pre>
+<p><img src="\img\Windows\image-20230809133219169.png" referrerpolicy="no-referrer" alt="image-20230809133219169"></p>
+<p>	③. 导出专业版映像</p>
+<pre><code>这里插一嘴，上一步直接选中专业版导出映像也行。
+</code></pre>
+<p><img src="\img\Windows\image-20230809133402937.png" referrerpolicy="no-referrer" alt="image-20230809133402937"></p>
+<p><img src="\img\Windows\image-20230809133420034.png" referrerpolicy="no-referrer" alt="image-20230809133420034"></p>
+<pre><code>DISM++到此暂时结束
+</code></pre>
+<ol start='3' >
+<li>打开MSMG_TOOL</li>
+
+</ol>
+<pre><code>将挂载的镜像sources文件夹整个复制到MSMG\DVD\sources文件夹
+</code></pre>
+<p><img src="\img\Windows\image-20230809133931151.png" referrerpolicy="no-referrer" alt="image-20230809133931151"></p>
+<p><img src="\img\Windows\image-20230809133614967.png" referrerpolicy="no-referrer" alt="image-20230809133614967"></p>
+<p><img src="\img\Windows\image-20230809133849789.png" referrerpolicy="no-referrer" alt="image-20230809133849789"></p>
+<p><img src="\img\Windows\image-20230809134039767.png" referrerpolicy="no-referrer" alt="image-20230809134306326"></p>
+<pre><code>删除DVD\sources文件夹中的install.wim，将刚才导出的install1.wim复制到此处，并重命名为install.wim
+</code></pre>
+<h4 id='二开始精简系统'>二、开始精简系统</h4>
+<pre><code>打开MSMG_TOOL文件夹中的Start.cmd
+</code></pre>
+<p><img src="\img\Windows\image-20230809134511854.png" referrerpolicy="no-referrer" alt="image-20230809134511854"></p>
+<pre><code>输入A
+</code></pre>
+<p><img src="\img\Windows\image-20230809134749135.png" referrerpolicy="no-referrer" alt="image-20230809134749135"></p>
+<p><img src="\img\Windows\image-20230809134759959.png" referrerpolicy="no-referrer" alt="image-20230809134759959"></p>
+<pre><code>选择[1] 源文件，输入1即可
+</code></pre>
+<p><img src="\img\Windows\image-20230809134855734.png" referrerpolicy="no-referrer" alt="image-20230809134855734"></p>
+<pre><code>选择[1] 从 &lt;DVD&gt; 文件夹中选择源文件，输入1即可
+</code></pre>
+<p><img src="\img\Windows\image-20230809134940082.png" referrerpolicy="no-referrer" alt="image-20230809134940082"></p>
+<pre><code>PS：如果你步过了刚才的删除不用的映像，这里会有很多项，想精简哪个按哪个数字
+这里继续输入1
+</code></pre>
+<p><img src="\img\Windows\image-20230809135107881.png" referrerpolicy="no-referrer" alt="image-20230809135107881"></p>
+<pre><code>请输入映像索引编号 # [按‘Q’退出] ：1
+
+你是否要安装 Windows 安装程序启动映像 ？ [是‘Y’/否‘N’] ： N
+你是否要安装 Windows 恢复映像 ？ [是‘Y’/否‘N’] ：	N
+</code></pre>
+<p><img src="\img\Windows\image-20230809135137432.png" referrerpolicy="no-referrer" alt="image-20230809135137432"></p>
+<pre><code>等待这个挂载完毕就行了
+</code></pre>
+<p><img src="\img\Windows\image-20230809135204121.png" referrerpolicy="no-referrer" alt="image-20230809135204121"></p>
+<p><img src="\img\Windows\image-20230809135240735.png" referrerpolicy="no-referrer" alt="image-20230809135240735"></p>
+<pre><code>按任意键返回[电源键除外]
+</code></pre>
+<p><img src="\img\Windows\image-20230809135316664.png" referrerpolicy="no-referrer" alt="image-20230809135316664"></p>
+<pre><code>这里输入3
+</code></pre>
+<p><img src="\img\Windows\image-20230809135404112.png" referrerpolicy="no-referrer" alt="image-20230809135404112"></p>
+<pre><code>如果想用MSMG_TOOL自带的规则移除列表可以直接输入2，或者3
+
+手动选择1
+</code></pre>
+<p><img src="\img\Windows\image-20230809135512857.png" referrerpolicy="no-referrer" alt="image-20230809135512857"></p>
+<pre><code>PS：刚才选择2或者3的这里输入2，
+手动的继续输入1
+</code></pre>
+<p><img src="\img\Windows\image-20230809135612197.png" referrerpolicy="no-referrer" alt="image-20230809135612197"></p>
+<p>【1】 Internet</p>
+<p><img src="\img\Windows\image-20230809135643253.png" referrerpolicy="no-referrer" alt="image-20230809135643253"></p>
+<pre><code>我选择保留所有，如果想移除，请输入序号就行，当序号右边的+变-，就代表移除这一项，当然不是立即移除，按X返回
+</code></pre>
+<p>【2】 多媒体</p>
+<p><img src="\img\Windows\image-20230809140011187.png" referrerpolicy="no-referrer" alt="image-20230809140011187"></p>
+<pre><code>我只移除了 [M] - Windows 系统评估工具
+
+按X返回
+</code></pre>
+<p>【3】  网    络</p>
+<p><img src="\img\Windows\image-20230809140121073.png" referrerpolicy="no-referrer" alt="image-20230809140121073"></p>
+<pre><code>[8] - 电子钱包服务 | 需要：Microsoft Pay
+[9] - Windows 邮件 | 需要：Windows 邮件应用
+
+按X返回
+</code></pre>
+<p>【4】 隐    私</p>
+<p><img src="\img\Windows\image-20230809140309674.png" referrerpolicy="no-referrer" alt="image-20230809140428496"></p>
+<pre><code>[B] - 客户体验改善计划（CEIP）
+[C] - 面部识别 | PS：如果有Windows Hello，请不要移除，否则不可用
+[K] - Windows 会员中心
+
+按X返回
+</code></pre>
+<p>【5】远程处理</p>
+<p><img src="\img\Windows\image-20230809140622794.png" referrerpolicy="no-referrer" alt="image-20230809140622794"></p>
+<pre><code>[1] - 家庭组
+[3] - OneDrive 桌面客户端
+远程协助就是远程桌面(RDP)，需要就保留不需要就移除
+
+按X返回
+</code></pre>
+<p>【6】系	统</p>
+<p><img src="\img\Windows\image-20230809140754729.png" referrerpolicy="no-referrer" alt="image-20230809140754729"></p>
+<pre><code>暂时没有想法，可以自己移除不想要的
+
+按2返回
+</code></pre>
+<p>【7】 系统应用 (重要)</p>
+<p><img src="\img\Windows\image-20230809141122182.png" referrerpolicy="no-referrer" alt="image-20230809141122182"></p>
+<pre><code>[16] - ECApp - 用于眼球运动控制的 Modern UI 对话框应用 | 依赖于：Windows 混合现实
+[23] - 地图控件
+[26] - OOBE Network Captive Portal - Windows 的 OOBE 阶段期间的强制网络门户支持 | 依赖于：CloudExperienceHost
+[27] - OOBE Network Captive Portal - Windows 的 OOBE 阶段期间的强制网络门户支持
+[28] - 家长控制 - 用于家长控制的应用
+[29] - People Experience 主机 - 人脉栏（People Hub）
+[34] - 零售演示内容
+[39] - Skype ORTC
+[47] - Windows 混合现实
+[50] - Xbox 主机小帮手后台客户端
+[51] - Xbox Game Callable UI - Xbox Live
+[52] - XGpu Eject Dialog - 用于安全移除外部 GPU 的现代对话应用
+
+PS:注意，26，27与Cortana有关联，如有使用Cortana，50,51,52与Xbox有关联，请不要移除
+按X返回
+</code></pre>
+<p>【8】Windows应用</p>
+<p><img src="\img\Windows\image-20230809141947036.png" referrerpolicy="no-referrer" alt="image-20230809141947036"></p>
+<pre><code>  [01] - 3D 查看器 | 依赖于：Windows 混合现实
+  [02] - Advertising Xaml	| 大毒瘤，广告应用
+  [03] - 闹钟和时钟
+  [06] - Cortana | 依赖于：语音识别
+  [08] - 反馈中心
+  [10] - 获取帮助
+  [14] - 地图 | 依赖于：地图控件
+  [16] - Microsoft Pay | 依赖于：电子钱包服务
+  [17] - 混合现实门户 | 依赖于：Windows 混合现实
+  [22] - 画图 3D
+  [23] - 人脉 | 依赖于：人脉栏
+  [24] - 手机连接
+  [29] - Skype
+  [30] - Solitaire Collection | 依赖于：Xbox Live
+  [33] - 使用技巧 - Windows 提示和教程应用
+  [35] - 天气 | 依赖于：Advertising Xaml
+  [38] - Windows 邮件应用 | 依赖于：Advertising Xaml、Windows 邮件
+  [40] - Xbox 主机小帮手 | 依赖于：Xbox 主机小帮手后台客户端
+  [41] - Xbox Game Bar Plugin | 依赖于：Xbox 主机小帮手
+  [42] - Xbox Game Bar | 依赖于：Xbox 主机小帮手
+  [43] - Xbox Identity Provider | 依赖于：Xbox 主机小帮手
+  [44] - Xbox Game Speech Window | 依赖于：Xbox 主机小帮手
+  [45] - Xbox UI | 依赖于：Xbox 主机小帮手
+  
+ 部分在第7步移除了大部分，
+ 按X返回
+</code></pre>
+<p><img src="\img\Windows\image-20230809142213952.png" referrerpolicy="no-referrer" alt="image-20230809142213952"></p>
+<pre><code>按X返回
+</code></pre>
+<p><img src="\img\Windows\image-20230809142235021.png" referrerpolicy="no-referrer" alt="image-20230809142235021"></p>
+<pre><code>输入2，开始移除，刚才选中的，过程较长
+</code></pre>
+<p><img src="\img\Windows\image-20230809142303176.png" referrerpolicy="no-referrer" alt="image-20230809142303176"></p>
+<p><img src="\img\Windows\image-20230809142606543.png" referrerpolicy="no-referrer" alt="image-20230809142606543"></p>
+<pre><code>移除完成后一直返回，现在开始移除任务栏的资讯
+选择[4]   自定义定制
+</code></pre>
+<p><img src="\img\Windows\image-20230809144824468.png" referrerpolicy="no-referrer" alt="image-20230809144824468"></p>
+<p><img src="\img\Windows\image-20230809144951671.png" referrerpolicy="no-referrer" alt="image-20230809144951671"></p>
+<pre><code>[8]   应用调整
+</code></pre>
+<p><img src="\img\Windows\image-20230809145118678.png" referrerpolicy="no-referrer" alt="image-20230809145118678"></p>
+<pre><code>[D]   禁用 Cortana 应用
+[O]   隐藏任务栏 Cortana 图标
+[P]   隐藏任务栏立即开会图标
+[Q]   隐藏任务栏资讯和兴趣
+[R]   隐藏任务栏搜索栏
+[S]   隐藏任务栏任务视图图标
+
+PS：所选操作是立即完成的。
+</code></pre>
+<p><img src="\img\Windows\image-20230809145206670.png" referrerpolicy="no-referrer" alt="image-20230809145206670"></p>
+<h4 id='三自定义功能'>三、自定义功能</h4>
+<pre><code>MSMG到此结束，一直按X返回，返回到主界面直接关闭，如需添加驱动以及其他功能，下次在详解，此次先步过
+</code></pre>
+<ol start='' >
+<li>继续打开DISM++</li>
+
+</ol>
+<pre><code>可以看见多出来一个专业版
+</code></pre>
+<p><img src="\img\Windows\image-20230809145656442.png" referrerpolicy="no-referrer" alt="image-20230809145656442"></p>
+<p><img src="\img\Windows\image-20230809145739302.png" referrerpolicy="no-referrer" alt="image-20230809145739302"></p>
+<ol start='2' >
+<li>打开会话，选择Appx管理</li>
+
+</ol>
+<pre><code>移除刚才没有完全移除的
+</code></pre>
+<p><img src="\img\Windows\image-20230809150036874.png" referrerpolicy="no-referrer" alt="image-20230809150036874"></p>
+<p><img src="\img\Windows\image-20230809150335180.png" referrerpolicy="no-referrer" alt="image-20230809150335180"></p>
+<pre><code>删除即可，如有Xbox，请勿移除携带Xbox的字样的选项
+</code></pre>
+<p>其他的功能按需添加，例如工具箱的hosts文件</p>
+<ol start='3' >
+<li>自定义相关功能</li>
+
+</ol>
+<pre><code>打开系统优化，按提示打开自己喜欢的功能
+</code></pre>
+<p><img src="\img\Windows\image-20230809150923594.png" referrerpolicy="no-referrer" alt="image-20230809150923594"></p>
+<p><img src="\img\Windows\image-20230809151004390.png" referrerpolicy="no-referrer" alt="image-20230809151004390"></p>
+<p><img src="\img\Windows\image-20230809151049065.png" referrerpolicy="no-referrer" alt="image-20230809151049065"></p>
+<p><img src="\img\Windows\image-20230809151112338.png" referrerpolicy="no-referrer" alt="image-20230809151112338"></p>
+<p><img src="\img\Windows\image-20230809151135425.png" referrerpolicy="no-referrer" alt="image-20230809151135425"></p>
+<p><img src="\img\Windows\image-20230809151152586.png" referrerpolicy="no-referrer" alt="image-20230809151152586"></p>
+<p><img src="\img\Windows\image-20230809151219942.png" referrerpolicy="no-referrer" alt="image-20230809151219942"></p>
+<p><img src="\img\Windows\image-20230809151247534.png" referrerpolicy="no-referrer" alt="image-20230809151247534"></p>
+<p><img src="\img\Windows\image-20230809151314924.png" referrerpolicy="no-referrer" alt="image-20230809151314924"></p>
+<p>其他选项暂时没有想法</p>
+<ol start='4' >
+<li>打包</li>
+
+</ol>
+<pre><code>选中文件，选择另存为映像 | 或者直接快捷键，Ctrl + Shift + S
+</code></pre>
+<p>   <img src="\img\Windows\image-20230809151618243.png" referrerpolicy="no-referrer" alt="image-20230809151618243"></p>
+<pre><code>点击保存就行了
+</code></pre>
+<p><img src="\img\Windows\image-20230809151652779.png" referrerpolicy="no-referrer" alt="image-20230809151652779"></p>
+<p><img src="\img\Windows\image-20230809151701416.png" referrerpolicy="no-referrer" alt="image-20230809151701416"></p>
+<pre><code>等待结束，结束后，选择文件，卸载映像
+</code></pre>
+<p><img src="\img\Windows\image-20230809152049223.png" referrerpolicy="no-referrer" alt="image-20230809152049223"></p>
+<pre><code>DISM++ 自定义到此结束
+</code></pre>
+<h4 id='四打包回映像文件'>四、打包回映像文件</h4>
+<ol start='' >
+<li>将ISO 文件全部复制到桌面或者其他目录</li>
+
+</ol>
+<p><img src="\img\Windows\image-20230809152253655.png" referrerpolicy="no-referrer" alt="image-20230809152253655"></p>
+<p><img src="\img\Windows\image-20230809152313887.png" referrerpolicy="no-referrer" alt="image-20230809152313887"></p>
+<ol start='2' >
+<li>进入sources文件夹，删除install.wim，将刚才打包回映像文件移动到此，并重命名回install.wim</li>
+
+</ol>
+<p><img src="\img\Windows\image-20230809152440459.png" referrerpolicy="no-referrer" alt="image-20230809152440459"></p>
+<p><img src="\img\Windows\image-20230809152504163.png" referrerpolicy="no-referrer" alt="image-20230809152504163"></p>
+<ol start='3' >
+<li>继续打开DISM++</li>
+
+</ol>
+<pre><code>选择工具箱中的ISO生成器
+</code></pre>
+<p><img src="\img\Windows\image-20230809152655499.png" referrerpolicy="no-referrer" alt="image-20230809152655499"></p>
+<pre><code>第一行选择刚才的文件夹，第二行选择保存的文件夹，并输入文件名，点击确定即可
+</code></pre>
+<p><img src="\img\Windows\image-20230809152759895.png" referrerpolicy="no-referrer" alt="image-20230809152759895"></p>
+<p><img src="\img\Windows\image-20230809152827499.png" referrerpolicy="no-referrer" alt="image-20230809152827499"></p>
+<h4 id='五利用vmware测试一下'>五、利用VMware测试一下</h4>
+<p>	Q：为什么用虚拟机测试？</p>
+<p>	A：防止安装过程中出现问题。</p>
+<p>&nbsp;</p>
+<p>关于虚拟机使用，请参考：</p>
+<p><a href='https://www.bilibili.com/video/BV1SB4y1b7wz' target='_blank' class='url'>https://www.bilibili.com/video/BV1SB4y1b7wz</a></p>
+<p>此处不做赘述</p>
+<p>附上机张截图</p>
+<p><img src="\img\Windows\image-20230809153452231.png" referrerpolicy="no-referrer" alt="image-20230809153452231"></p>
+<p><img src="\img\Windows\image-20230809154247893.png" referrerpolicy="no-referrer" alt="image-20230809154247893"></p>
+<p><img src="\img\Windows\image-20230809154304774.png" referrerpolicy="no-referrer" alt="image-20230809154304774"></p>
+<p><img src="\img\Windows\image-20230809154323488.png" referrerpolicy="no-referrer" alt="image-20230809154323488"></p>
+<pre><code>教程到此，彻底结束，完结，撒花✿✿ヽ(°▽°)ノ✿。
+</code></pre>
+<p>&nbsp;</p>
+</body>
+</html>
