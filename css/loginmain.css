@@ -4,7 +4,7 @@
 }
 body {
 	height: 100vh;
-	background: #e7e7e7 url("login_bg.jpg") center no-repeat fixed;
+	background: #e7e7e7 url("../img/loginbg.jpg") center no-repeat fixed;
 	background-size: cover;
 	backdrop-filter: blur(5px);
 	display: flex;
@@ -64,7 +64,7 @@ body {
 	height: 100%;
 	position: relative;
 	left: -100%;
-	background: url("login_bg.jpg") no-repeat center fixed;
+	background: url("../img/loginbg.jpg") no-repeat center fixed;
 	background-size: cover;
 	transition: transform 0.6s ease-in-out;
 	transform: translateX(0);
