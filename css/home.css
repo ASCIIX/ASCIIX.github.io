@@ -1,11 +1,12 @@
 * {
-    padding: 0;
     margin: 0;
+    padding-left: 6px;
 }
 
 body {
-    height: 100vh;
+    /*height: 100vh;*/
     background: linear-gradient(#99f,#f99);     /*背景渐变*/
+
 }
 
 h3 {
@@ -13,15 +14,9 @@ h3 {
 }
 h4 {
     color: #ff1ace;
+/*    text-indent: 3em;*/
 }
 
 h5 {
     color: darkorchid;
-}
-
-#footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 25px;
 }
