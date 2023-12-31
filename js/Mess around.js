@@ -3,7 +3,7 @@ function GetServerTime()
 	var date = new Date( );
 	var now = date.getTime( );
 
- 	var endDate = new Date("01/01/2024 00:00:00");
+ 	var endDate = new Date("01/01/2025 00:00:00");
 	var end = endDate.getTime( );
 
     	var leftTime = end - now;
