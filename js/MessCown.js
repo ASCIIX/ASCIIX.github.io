@@ -13,7 +13,8 @@ function updateCountdown(targetDate, elementId) {
     const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
     //const countdownText = `距离${targetDate.getFullYear()}年元旦还有${years}年${days}天${hours}小时${minutes}分钟${seconds}秒`;
-    const countdownText = `距离${targetDate.getFullYear()}年元旦还有: ${days}天${hours}小时${minutes}分钟${seconds}秒`;
+    //const countdownText = `距离${targetDate.getFullYear()}年元旦还有: ${days}天${hours}小时${minutes}分钟${seconds}秒`;
+    const countdownText = `距离${targetDate.getFullYear()}年还有: ${days}天${hours}小时${minutes}分钟${seconds}秒`;
     document.getElementById(elementId).textContent = countdownText;
   }
 
