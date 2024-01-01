@@ -19,6 +19,7 @@ h2 {
     z-index: -1;
 }
 h3 {
+    padding-left: 10px;
     text-align: center;
     color: #ffcccc;
     z-index: -1;
@@ -51,6 +52,13 @@ a:link {
 #footer {
     width: 100%;
     height: 25px;
+}
+
+#countdownNextYear {
+    margin-left: 100px;
+}
+#countdownNextNextYear {
+    margin-left: 100px;
 }
 
 .wrapper {
@@ -209,18 +217,3 @@ a:link {
     background-color: #fb7299;
     transition: top 0.3s ease-in-out,transform 0.3s ease-in-out 0.3s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
