@@ -139,8 +139,8 @@ a:link {
 }
 
 
-/*以下是导航栏*/
-.navbar,.navbar ul {
+/* 以下是导航栏 */
+.navbar, .navbar ul {
     top: 10px;
     display: flex;
     justify-content: center;
@@ -157,7 +157,7 @@ a:link {
 .navbar input {
     width: 35px;
     height: 35px;
-    cursor: pointer;  /*鼠标变手指*/
+    cursor: pointer;  /* 鼠标变手指 */
     opacity: 0;
 }
 
@@ -170,7 +170,7 @@ a:link {
     border-radius: 15px;
     background-color: #999;
     pointer-events: none;
-    transition: transform 0.3s ease-in-out 0.3s,top 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out 0.3s, top 0.3s ease-in-out;
 }
 
 .navbar span:nth-child(3) {
@@ -179,9 +179,9 @@ a:link {
 
 .navbar ul {
     width: 0;
-    overflow: hidden;   /*溢出隐藏*/
-    white-space: nowrap;    /*一行显示*/
-    transition: all 0.5s;
+    overflow: hidden;   /* 溢出隐藏 */
+    white-space: nowrap;    /* 一行显示 */
+    transition: width 0.5s;  /* 只需要过渡width属性 */
 }
 
 .navbar ul li {
@@ -200,20 +200,16 @@ a:link {
     color: #fb7299;
 }
 
-.navbar input:checked ~ ul {
+/* 鼠标悬停状态下展开导航栏 */
+.navbar:hover ul {
     width: 350px;
 }
 
-.navbar input:checked ~ span:nth-child(2) {
+/* 不再需要input:checked的样式 */
+.navbar span:nth-child(2),
+.navbar span:nth-child(3) {
     top: calc(50% - 2px);
     transform: rotate(-45deg);
     background-color: #fb7299;
-    transition: top 0.3s ease-in-out,transform 0.3s ease-in-out 0.3s;
-}
-
-.navbar input:checked ~ span:nth-child(3) {
-    top: calc(50% - 2px);
-    transform: rotate(45deg);
-    background-color: #fb7299;
-    transition: top 0.3s ease-in-out,transform 0.3s ease-in-out 0.3s;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 }
