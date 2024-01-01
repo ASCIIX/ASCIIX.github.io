@@ -1,3 +1,8 @@
+/*
+author:SakuraX
+去他喵的注释，老子才不写注释。
+现已修复倒计时bug，不用每年修改，已替换为MessCown.js
+*/
 function GetServerTime()
 {
 	var date = new Date( );
