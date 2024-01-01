@@ -206,10 +206,15 @@ a:link {
 }
 
 /* 不再需要input:checked的样式 */
-.navbar span:nth-child(2),
-.navbar span:nth-child(3) {
+.navbar span:nth-child(2) {
     top: calc(50% - 2px);
     transform: rotate(-45deg);
+    background-color: #fb7299;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+.navbar span:nth-child(3) {
+    top: calc(50% - 2px);
+    transform: rotate(45deg);
     background-color: #fb7299;
     transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 }
