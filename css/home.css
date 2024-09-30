@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding-left: 6px;
+}
+
+body {
+    background: linear-gradient(#99f,#f99);     /*背景渐变*/
+}
+
+h3 {
+    color: cyan;
+}
+h4 {
+    color: #ff1ace;
+}
+
+h5 {
+    color: darkorchid;
+}
+ul {
+    list-style:none;
+}
+li {
+    list-style:none;
+}

@@ -1,0 +1,168 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100vh;
+	background: #e7e7e7 url("../img/loginbg.jpg") center no-repeat fixed;
+	background-size: cover;
+	backdrop-filter: blur(5px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	background-color: #e7e7e7;
+	border-radius: 0.7rem;
+	box-shadow:
+	0 0.9rem 1.7rem rgba(0,0,0,0.25),
+	0 0.7rem 0.7rem rgba(0,0,0,0.22);
+	height: 420px;
+	max-width: 750px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+}
+/* 登录、注册框 通用部分 */
+.container-form {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	transition: all 0.6s ease-in-out;
+}
+/* 登录框 - 默认层级 2 - 透明度 1 */
+.container-signin {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+/* 注册框 - 默认层级 1 - 透明度 0 */
+.container-signup {
+	left: 0;
+	opacity: 0;
+	width: 50%;
+	z-index: 1;
+}
+
+/* 叠加部分 */
+.container-overlay {
+	height: 100%;
+	left: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	transition: transform 0.6s ease-in-out;
+	width: 50%;
+	z-index: 100;
+}
+
+/* 叠加盒子，宽度200%，只显示右半边，左边溢出隐藏 */
+.overlay {
+	width: 200%;
+	height: 100%;
+	position: relative;
+	left: -100%;
+	background: url("../img/loginbg.jpg") no-repeat center fixed;
+	background-size: cover;
+	transition: transform 0.6s ease-in-out;
+	transform: translateX(0);
+}
+
+/* 另外半边样式 */
+.overlay-panel {
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+.overlay-left {
+	transform: translateX(-20%);
+}
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+/* 设计激活时叠加层的位置 */
+.panel-active .overlay-left {
+	transform: translateX(0);
+}
+.panel-active .container-overlay {
+	transform: translateX(-100%);
+}
+.panel-active .overlay {
+	transform: translateX(50%);
+}
+/* 设置激活时，登录注册层的位置和透明度 */
+.panel-active .container-signin {
+	transform: translateX(100%);
+}
+.panel-active .container-signup {
+	opacity: 1;
+	z-index: 5;
+	transform: translateX(100%); /* 通过类名 panel-active 添加激活时的状态 */
+}
+
+/* 表单样式 */
+.form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 3rem;
+	height: 100%;
+	text-align:	center;
+	background-color: #e7e7e7;
+}
+/* 表单居中、设置标题 */
+.form-title {
+	font-weight: 300;
+	margin: 0;
+	margin-bottom: 1.25rem;
+}
+
+/* 链接、输入框美化 */
+.link {
+	color: #333;
+	font-size: 0.9rem;
+	margin: 1.5rem 0;
+	text-decoration: none;
+}
+.input {
+	width: 100%;
+	background-color: #fff;
+	padding: 0.9rem 0.9rem;
+	margin: 0.5rem 0;
+	border: none;
+	outline: none;
+}
+
+/* 按钮通用样式美化 */
+.btn {
+	background-color: #f25d8e;
+	box-shadow: 0 4px 4px rgba(255,112,159,.3);
+	border-radius: 5px;
+	color: #e7e7e7;
+	border: none;
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 4rem;
+	text-transform: uppercase;
+}
+
+.form > .btn{
+	margin-top: 1.5rem;
+}
+.btn:active {
+	transform: scale(0.95);
+}

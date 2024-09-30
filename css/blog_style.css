@@ -1,0 +1,186 @@
+/* 基本样式设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('http://127.0.0.1/img/loginbg.jpg'); /* 背景图片 */
+    background-size: cover; /* 确保图片覆盖整个页面 */
+    background-position: center center; /* 居中对齐 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-attachment: fixed; /* 背景图片固定，页面滚动时不移动 */
+    overflow: hidden; /* 隐藏滚动条 */
+    overflow-y: auto; /* 保持垂直滚动但隐藏滚动条 */
+}
+
+/* WebKit 浏览器隐藏滚动条 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1, h2 {
+    color: #99b3ff;
+}
+
+/* 透明状态栏 - 毛玻璃效果 */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px); /* Safari 支持 */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 分隔线 */
+    
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+/* 导航菜单 */
+.nav-menu {
+    display: flex;
+    justify-content: center; /* 让项目居中 */
+    align-items: center;
+    gap: 20px; /* 控制每个链接之间的距离 */
+}
+
+.nav-menu a {
+    color: ff99cc; /* 链接颜色 */
+    text-decoration: none;
+    padding: 0 10px; /* 为每个链接增加内边距 */
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* 添加分隔符 */
+.nav-menu a:not(:last-child)::after {
+/*    content: "|"; /* 分隔符 */*/
+    color: white;
+    margin-left: 10px; /* 分隔符与文字之间的空隙 */
+}
+
+/* 左侧标题 */
+.left-title {
+    margin-left: 20px; /* 可以根据需要调整 */
+}
+
+/* 右侧标题 */
+.right-title {
+    margin-right: 20px; /* 可以根据需要调整 */
+}
+
+
+/* 主布局 */
+.main-content {
+    display: flex;
+    justify-content: space-between; /* 左右分布 */
+    margin-top: 70px;
+    padding: 20px;
+}
+/* 左侧内容容器，用于让两个 left-sidebar 垂直排列 */
+.left-content {
+    display: flex;
+    flex-direction: column; /* 让左边栏垂直排列 */
+    width: auto;
+    margin-right: 28%; /* 在右侧留出 5% 的间距 */
+
+}
+
+/* 左边栏 */
+.left-sidebar {
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* 分隔线 */
+}
+
+/* 为每个 .summary 元素添加框样式 */
+.summary {
+/*    background-color: white;*/
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.summary h3 {
+    color: #ff80bf;
+    margin-bottom: 10px;
+}
+.summary p {
+    font-size: 14px;
+    color: #b3ffb3;
+}
+.summary a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.summary img {
+    max-width: 60%; /* 图片的最大宽度为父容器的 60% */
+    height: auto; /* 自动调整高度，保持纵横比 */
+    display: block; /* 将图片作为块级元素，以确保不会出现额外的空隙 */
+    margin-top: 10px; /* 图片与上方内容之间增加一些间距 */
+}
+
+
+
+/* 右侧内容容器 */
+.right-content {
+/*    display: flex;*/
+    position: fixed; /* 固定位置 */
+    flex-direction: column; /* 让右边栏垂直排列 */
+    width: auto; /* 设置右侧栏的宽度 */
+    right: 5px;
+
+}
+
+/* 右边栏 - 毛玻璃效果 */
+.right-sidebar {
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    padding: 20px;
+    margin-bottom: 20px; /* 增加右边栏之间的间距 */
+    border-left: 1px solid rgba(255, 255, 255, 0.2); /* 分隔线 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 可选：添加一个分隔线 */
+}
+
+
+/* Calendar 样式 */
+#calendar, #archive {
+    margin-top: 20px;
+}
+/* 基本日历样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: top;
+}
+th {
+    background-color: #007BFF;
+    color: white;
+}
+td small {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+.today {
+/*    background-color: #ffb3cc;*/
+    color: #ff80bf;
+    font-weight: bold;

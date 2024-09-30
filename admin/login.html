@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>东方Project | login</title>
+    <link href="../img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="../css/loginmain.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="zh-cn" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="baidu-site-verification" content="code-bjTiFND3Vn" />
+    <meta name="keywords" content="登录">
+    <meta name="description" content="登录">
+    <meta name="author" content="SakuraX">
+</head>
+<body>
+
+<div class="container">
+	<!--注册-->
+	<div class="container-form container-signup" id="signup-container">
+		<form action="#" class="form" id="form1">
+			<h2 class="form-title">注册账号</h2>
+			<input type="text" placeholder="User" class="input" />
+			<input type="email" placeholder="Email" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+			<button type="button" class="btn">点击注册</button>
+		</form>
+	</div>
+
+	<!--登录-->
+	<div class="container-form container-signin hidden" id="signin-container">
+		<form action="#" class="form" id="form2">
+			<h2 class="form-title">欢迎登录</h2>
+			<!--input type="text" placeholder="User" class="input" /-->
+			<input type="email" placeholder="Email" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+			<a href="#" class="link">忘记密码?</a>
+			<button type="button" class="btn">登录</button>
+		</form>
+	</div>
+	
+	<!--叠加部分-->
+	<div class="container-overlay">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<button class="btn" id="signIn">已有账号，直接登录</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<button class="btn" id="signUp">没有账号，点击注册</button>
+			</div>
+		</div>
+	</div>
+	<!--
+	<div id="footer">
+		<h5 style="text-align: center">写不来代码就去抄，不丢人！</h5>
+	</div>-->
+</div>
+        <script type="text/javascript" src="../js/loginswap.js"></script>
+</body>
+</html>

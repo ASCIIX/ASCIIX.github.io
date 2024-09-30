@@ -1,0 +1,53 @@
+@echo off 
+color 1f 
+title 关闭常见的危险端口  By:SakuraX
+echo. 
+echo. 
+echo 本批处理用于启动windows系统的防火墙并关闭常见的危险端口 
+echo. 
+echo 请确认您正在使用的是windows系统 并且未安装其他防火墙 
+echo. 
+echo 以避免与windows系统的防火墙发生冲突 
+echo. 
+echo. 
+echo. 
+pause 
+cls 
+echo 正在启动防火墙 请稍候… 
+sc config SharedAccess start= auto > nul 
+net start SharedAccess > nul 
+echo 防火墙已经成功启动 
+echo. 
+echo 正在关闭常见的危险端口 请稍候… 
+echo. 
+echo 正在关闭135端口 请稍候… 
+netsh firewall set portopening protocol = ALL port = 135 name = 135 mode = DISABLE scope = ALL profile = ALL 
+echo 正在关闭137端口 请稍候… 
+netsh firewall set portopening protocol = ALL port = 137 name = 137 mode = DISABLE scope = ALL profile = ALL 
+echo 正在关闭138端口 请稍候… 
+netsh firewall set portopening protocol = ALL port = 138 name = 138 mode = DISABLE scope = ALL profile = ALL 
+echo 正在关闭139端口 请稍候… 
+netsh firewall set portopening protocol = ALL port = 139 name = 139 mode = DISABLE scope = ALL profile = ALL 
+echo 正在关闭445端口 请稍候… 
+netsh firewall set portopening protocol = ALL port = 445 name = 445 mode = DISABLE scope = ALL profile = ALL 
+echo 正在关闭593端口 请稍候… 
+netsh firewall set portopening protocol = TCP port = 593 name = 593 mode = DISABLE scope = ALL profile = ALL 
+echo 正在关闭1025端口 请稍候… 
+netsh firewall set portopening protocol = TCP port = 1025 name = 1024 mode = DISABLE scope = ALL profile = ALL 
+echo 正在关闭3389端口 请稍候… 
+netsh firewall set portopening protocol = ALL port = 3389 name = 3389 mode = DISABLE scope = ALL profile = ALL 
+cls 
+echo. 
+echo. 
+echo. 
+echo 常见的危险端口已经关闭 
+echo. 
+echo. 
+echo. 
+echo. 
+echo 
+echo. 
+echo. 
+echo. 
+echo 按任意键退出 
+pause>nul 
