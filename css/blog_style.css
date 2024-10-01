@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
 }
 
 h1, h2 {
-    color: #99b3ff;
+    color: #80a0ff;
 }
 
 /* 透明状态栏 - 毛玻璃效果 */
@@ -77,6 +77,10 @@ h1, h2 {
     margin-right: 20px; /* 可以根据需要调整 */
 }
 
+/* 右侧归档列表 */
+ul{
+    list-style: none;
+}
 
 /* 主布局 */
 .main-content {
