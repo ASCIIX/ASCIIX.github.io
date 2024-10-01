@@ -73,11 +73,10 @@ h1, h2 {
 
 /* 左侧栏容器，不再使用固定定位 */
 .left-sidebar-scroll {
-    width: 250px; /* 适中宽度 */
+    width: 500px; /* 设置左侧栏宽度 */
     margin-right: 20px; /* 与内容区域的间隔 */
     overflow-y: auto; /* 允许滚动 */
 }
-
 
 /* 左边固定侧边栏 */
 .left-fixed-sidebar {
@@ -91,12 +90,12 @@ h1, h2 {
 }
 
 .left-fixed-sidebar img {
-    max-width: 100%; /* 确保图片不超出容器 */
-    height: auto; /* 保持比例 */
+    max-width: 100%; /* 确保图片的最大宽度为容器宽度 */
+    height: auto; /* 保持图片的纵横比 */
     display: block; /* 让图片独占一行 */
     margin: 0 auto 10px; /* 图片居中并且与下方元素间隔 */
-    border-radius: 200px; /* 圆角效果 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    border-radius: 200px; /* 可选：给图片添加圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：为图片添加阴影 */
 }
 
 
@@ -143,31 +142,21 @@ ul{
     list-style: none;
 }
 
-@media (max-width: 768px) {
-    .main-content {
-        flex-direction: column; /* 小屏幕上改为上下排列 */
-    }
-    
-    .left-sidebar-scroll, .right-content {
-        width: 100%; /* 让左右栏在小屏幕上占满宽度 */
-        margin: 0;
-    }
-}
-
-
 /* 主布局 */
 .main-content {
     display: flex;
-    justify-content: space-between; /* 左右分布 */
+    justify-content: space-between;
     margin-top: 70px;
     padding: 20px;
-    gap: 10px; /* 左右栏之间留出空间 */
 }
 
-/* 左侧内容容器 */
+/* 左侧内容容器，用于让两个 left-sidebar 垂直排列 */
 .left-content {
-    flex: 1; /* 占据剩余空间 */
-    margin-right: 15px; /* 控制右边距 */
+    /* display: flex; */
+    /* flex-direction: column; 让左边栏垂直排列 */
+    margin-left: auto; /* 留出侧边栏的空间 */
+    margin-right: 1%; /* 右侧边栏的间距 */
+
 }
 
 /* 左边栏 */
@@ -206,13 +195,13 @@ ul{
 }
 
 .summary img {
-    max-width: 100%; /* 确保图片不超出容器 */
-    height: auto; /* 保持比例 */
-    display: block; /* 让图片独占一行 */
-    margin: 0 auto 10px; /* 图片居中并且与下方元素间隔 */
-    border-radius: 10px; /* 圆角效果 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    max-width: 100%; /* 图片的最大宽度为父容器的 60% */
+    height: auto; /* 自动调整高度，保持纵横比 */
+    display: block; /* 将图片作为块级元素，以确保不会出现额外的空隙 */
+    margin-top: 10px; /* 图片与上方内容之间增加一些间距 */
 }
+
+
 
 /* 右侧内容容器 */
 .right-content {
@@ -227,84 +216,44 @@ ul{
 .right-sidebar {
     background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
     backdrop-filter: blur(10px); /* 毛玻璃效果 */
-    -webkit-backdrop-filter: blur(10px); /* Safari 支持 */
     padding: 20px;
-    margin-bottom: 20px; /* 增加右边栏之间的间距 */
+    margin-bottom: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.2); /* 分隔线 */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 可选：添加分隔线 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
-    border-radius: 10px; /* 可选：添加圆角效果 */
-    overflow: hidden; /* 确保背景效果不超出容器 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 可选：添加一个分隔线 */
+    box-sizing: border-box; /* 确保 padding 不影响宽度计算 */
+    width: 100%; /* 让内容自适应右侧栏的宽度 */
 }
 
-/* 日历的表格样式 */
+/* 日历样式 */
 #calendar {
-    width: 100%;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.3); /* 半透明背景 */
-    backdrop-filter: blur(5px); /* 为日历也添加模糊效果 */
-    -webkit-backdrop-filter: blur(5px); /* Safari 支持 */
-    padding: 10px;
-    border-radius: 10px;
-    overflow: hidden; /* 确保内容不超出容器 */
-    margin-bottom: 20px; /* 增加日历与下面元素的间隔 */
+    width: 100%; /* 让日历宽度充满右侧栏 */
+    border-collapse: collapse; /* 让表格边框不重叠 */
+    margin-top: 10px;
 }
 
-
-/* 月份和年份显示部分 */
-#monthAndYear {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* 用来放置年份和月份的文字 */
-#monthAndYearText {
-    margin: 0 20px; /* 间距确保按钮不会紧贴月份和年份 */
-}
-
-/* 上个月和下个月按钮的样式 */
-button.prev, button.next {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #007BFF;
-    transition: color 0.3s;
-}
-
-button.prev:hover, button.next:hover {
-    color: #ff80bf; /* 悬停时改变颜色 */
-}
-
-
-/* 日历表格 */
-#calendarTable {
+/* 基本日历样式 */
+table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
 }
-
-#calendarTable th, #calendarTable td {
+th, td {
     padding: 10px;
     border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: top;
 }
-
-#calendarTable th {
-    background-color: #cc57a59f;
+th {
+    background-color: #007BFF;
     color: white;
 }
-
-/* 高亮今天的日期 */
-.today {
-    color: #ff80bf;
-}
-
-/* 农历日期样式 */
 td small {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
+    color: #666;
+}
+.today {
+/*    background-color: #ffb3cc;*/
     color: #ff80bf;
-    margin-top: 5px;
+    font-weight: bold;
 }

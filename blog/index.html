@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="zh-cn" />
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="博客">
     <meta name="description" content="博客">
     <meta name="author" content="SakuraX">
@@ -35,10 +35,18 @@
                 <p>网名：SakuraX</p>
                 <span>超级大菜鸡一个，啥也不会。真的</span>
                 <ul>
-                    <li><a href="#">链接1</a></li>
-                    <li><a href="#">链接2</a></li>
-                    <li><a href="#">链接3</a></li>
-                    <li><a href="#">链接4</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
+                    <li><a href="#">待开发</a></li>
                 </ul>
             </div>
         </div>
@@ -50,7 +58,7 @@
                 <div class="summary">
                     <h3>关于MoeCTF 竞赛部分解题思路</h3>
                     <p>这是关于MoeCTF解题思路 <a href="index2.html">Read more</a></p>
-                    <img src="/img/213.jpg">
+                    <img src="../img/213.jpg">
                 </div>
 
             </div>
@@ -60,7 +68,7 @@
                     <h3>破解WiFi实战</h3>
                     <p>This is a brief summary of the content. <a href="/blog/WiFi.html">Read more</a></p>
                     <br />
-                    <img src="/img/1232.png">
+                    <img src="../img/1232.png">
                 </div>
 
             </div>
@@ -71,7 +79,7 @@
                     <h3>XShell 连接 Termux</h3>
                     <p>This is a brief summary of the content. <a href="/blog/XShell.html">Read more</a></p>
                     <br />
-                    <img src="/img/1232.png">
+                    <img src="../img/1232.png">
                 </div>
 
             </div>
@@ -136,9 +144,29 @@
         <!-- 右边栏容器 -->
         <div class="right-content">
             <!-- 右边栏 - 日历 -->
-            <div class="right-sidebar">
-                <h2>不知道从哪捡来的日历</h2>
-                <div id="calendar"></div>
+            <div id="calendar">
+                <h2>不知道从哪里捡来的日历</h2>
+                <div id="monthAndYear">
+                    <button class="prev" onclick="previous()"><<</button>
+                    <span id="monthAndYearText"></span>
+                    <button class="next" onclick="next()">>></button>
+                </div>
+                <table id="calendarTable">
+                    <thead>
+                        <tr>
+                            <th>日</th>
+                            <th>一</th>
+                            <th>二</th>
+                            <th>三</th>
+                            <th>四</th>
+                            <th>五</th>
+                            <th>六</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendarBody">
+                        <!-- JavaScript will dynamically insert the calendar days here -->
+                    </tbody>
+                </table>
             </div>
 
             <!-- 右边栏 - 归档 -->
@@ -171,10 +199,10 @@
                 </div>
             </div>
 
-            <script src="../js/blog_script.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/lunar-javascript@1.0.11/lunar.min.js"></script>
-
+            <script src="../js/calendar.js"></script>
+            <!-- <script src="../js/blog_script.js"></script> -->
+            <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+            <script src="../js/lunar.js"></script>
 
 </body>
 
