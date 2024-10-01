@@ -52,7 +52,7 @@ h1, h2 {
 }
 
 .nav-menu a {
-    color: ff99cc; /* 链接颜色 */
+    color: #ff99cc; /* 链接颜色 */
     text-decoration: none;
     padding: 0 10px; /* 为每个链接增加内边距 */
     font-size: 16px;
@@ -62,10 +62,71 @@ h1, h2 {
 
 /* 添加分隔符 */
 .nav-menu a:not(:last-child)::after {
-/*    content: "|"; /* 分隔符 */*/
+/*    content: "|"; /* 分隔符 */
     color: white;
     margin-left: 10px; /* 分隔符与文字之间的空隙 */
 }
+
+.nav-menu a:hover {
+    color: #66ffe0; /* 悬停时更改链接颜色 */
+}
+
+/* 左侧栏容器，不再使用固定定位 */
+.left-sidebar-scroll {
+    width: 200px; /* 设置左侧栏宽度 */
+    margin-right: 20px; /* 与内容区域的间隔 */
+    overflow-y: auto; /* 允许滚动 */
+}
+
+/* 左边固定侧边栏 */
+.left-fixed-sidebar {
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    padding: 20px;
+    margin-bottom: 20px; /* 元素之间的间隔 */
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* 分隔线 */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.left-fixed-sidebar img {
+    max-width: 100%; /* 图片的最大宽度为容器的 100% */
+    height: auto; /* 自动调整高度，保持图片的纵横比 */
+    display: block; /* 将图片设置为块级元素，避免行内空隙 */
+    margin-top: 10px; /* 给图片顶部留一些空隙 */
+    margin-bottom: 10px; /* 给图片底部留一些空隙 */
+    border-radius: 10px; /* 可选：给图片添加圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：为图片添加阴影 */
+}
+
+
+
+.left-fixed-sidebar h2 {
+    font-size: 18px;
+    color: #ff80bf;
+    margin-bottom: 10px;
+}
+
+.left-fixed-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-fixed-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.left-fixed-sidebar ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.left-fixed-sidebar ul li a:hover {
+    color: #ff80bf; /* 悬停时更改链接颜色 */
+}
+
 
 /* 左侧标题 */
 .left-title {
@@ -85,16 +146,17 @@ ul{
 /* 主布局 */
 .main-content {
     display: flex;
-    justify-content: space-between; /* 左右分布 */
+    justify-content: space-between;
     margin-top: 70px;
     padding: 20px;
 }
+
 /* 左侧内容容器，用于让两个 left-sidebar 垂直排列 */
 .left-content {
-    display: flex;
-    flex-direction: column; /* 让左边栏垂直排列 */
-    width: auto;
-    margin-right: 28%; /* 在右侧留出 5% 的间距 */
+    /* display: flex; */
+    /* flex-direction: column; 让左边栏垂直排列 */
+    margin-left: 220px; /* 留出侧边栏的空间 */
+    margin-right: 28%; /* 右侧边栏的间距 */
 
 }
 
@@ -127,6 +189,10 @@ ul{
 .summary a {
     color: #007BFF;
     text-decoration: none;
+}
+
+.summary a:hover {
+    color: #66ffe0; /* 悬停时更改链接颜色 */
 }
 
 .summary img {
@@ -188,3 +254,4 @@ td small {
 /*    background-color: #ffb3cc;*/
     color: #ff80bf;
     font-weight: bold;
+}
